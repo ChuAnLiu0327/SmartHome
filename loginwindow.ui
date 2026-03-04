@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>345</width>
+    <height>366</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>登录</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons/YongHuDengLu.qrc">
+    <normaloff>:/new/prefix1/YongHuDengLu.png</normaloff>:/new/prefix1/YongHuDengLu.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 设置widget背景 - 非常浅的蓝色渐变 */
+QWidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #F0F8FF, stop:0.5 #E6F3FF, stop:1 #D6E9FF);
+    border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    border: none;
+	background: transparent;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">/* 设置label样式 - 黑体字体，透明背景 */
+QLabel {
+    color: blue;
+    font-size: 14px;
+    border: none;
+    background: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;小区登陆系统&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">QWidget{
+	border: none;
+	background: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;欢迎使用智慧小区管理平台&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget {
+    border: none;
+	background: transparent;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget {
+    border: none;
+	background: transparent;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">QLable{
+    border: none;
+	background: transparent;
+}</string>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;住户账号&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_account">
+            <property name="styleSheet">
+             <string notr="true">/* 设置LineEdit样式 - 添加边框和背景色 */
+QLineEdit {
+    border: 1px solid #CCCCCC;      /* 浅灰色边框 */
+    border-radius: 4px;             /* 圆角边框 */
+    padding: 5px 10px;              /* 内边距 */
+    font-size: 16px;                /* 字体大小 */
+    background-color: #FFFFFF;      /* 白色背景 */
+    color: #333333;                 /* 深灰色字体 */
+    font-family: &quot;黑体&quot;, &quot;SimHei&quot;;  /* 黑体字体 */
+    selection-background-color: #1E90FF;  /* 选中文本背景色 */
+}
+
+/* LineEdit获取焦点时的样式 */
+QLineEdit:focus {
+    border: 1px solid #1E90FF;      /* 蓝色边框 */
+    outline: none;                  /* 取消默认焦点轮廓 */
+}
+
+/* LineEdit提示词样式 */
+QLineEdit::placeholder {
+    color: #999999;                 /* 浅灰色提示词 */
+    font-size: 13px;                /* 提示词字体大小 */
+    font-style: italic;             /* 斜体 */
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <property name="styleSheet">
+          <string notr="true">QWidget {
+    border: none;
+	background: transparent;
+}</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">QLable{
+    border: none;
+	background: transparent;
+}</string>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700;&quot;&gt;登录密码&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_password">
+            <property name="styleSheet">
+             <string notr="true">/* 设置LineEdit样式 - 添加边框和背景色 */
+QLineEdit {
+    border: 1px solid #CCCCCC;      /* 浅灰色边框 */
+    border-radius: 4px;             /* 圆角边框 */
+    padding: 5px 10px;              /* 内边距 */
+    font-size: 16px;                /* 字体大小 */
+    background-color: #FFFFFF;      /* 白色背景 */
+    color: #333333;                 /* 深灰色字体 */
+    font-family: &quot;黑体&quot;, &quot;SimHei&quot;;  /* 黑体字体 */
+    selection-background-color: #1E90FF;  /* 选中文本背景色 */
+}
+
+/* LineEdit获取焦点时的样式 */
+QLineEdit:focus {
+    border: 1px solid #1E90FF;      /* 蓝色边框 */
+    outline: none;                  /* 取消默认焦点轮廓 */
+}
+
+/* LineEdit提示词样式 */
+QLineEdit::placeholder {
+    color: #999999;                 /* 浅灰色提示词 */
+    font-size: 13px;                /* 提示词字体大小 */
+    font-style: italic;             /* 斜体 */
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_login">
+         <property name="styleSheet">
+          <string notr="true">/* 设置按钮样式 */
+QPushButton {
+    /* 边框设置 */
+    border: 2px solid #2E8B57;           /* 海绿色边框 */
+    border-radius: 8px;                  /* 圆角边框 */
+    
+    /* 背景渐变 - 从上到下的渐变 */
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #20B2AA, stop:1 #3CB371);
+    
+    /* 字体设置 */
+    color: white;                        /* 白色字体 */
+    font-size: 14px;                     /* 字体大小 */
+    font-family: &quot;黑体&quot;, &quot;SimHei&quot;;        /* 黑体字体 */
+    font-weight: bold;                   /* 字体加粗 */
+    
+    /* 内边距 */
+    padding: 8px 16px;                   /* 上下8px，左右16px */
+    
+    /* 文本对齐 */
+    text-align: center;
+   
+}
+
+/* 鼠标悬停时的按钮样式 */
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #40E0D0, stop:1 #66CDAA);
+    border: 2px solid #228B22;           /* 悬停时边框变深 */
+    color: white;
+}
+
+/* 按钮按下时的样式 */
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #008B8B, stop:1 #2E8B57);
+    border: 2px solid #006400;           /* 按下时边框更深 */
+    padding: 9px 16px 7px 16px;          /* 模拟按下效果 */
+}
+
+/* 按钮焦点状态（键盘导航） */
+QPushButton:focus {
+    outline: none;                      /* 取消默认焦点轮廓 */
+    border: 2px solid #1E90FF;          /* 焦点时蓝色边框 */
+}</string>
+         </property>
+         <property name="text">
+          <string>登录</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>345</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="icons/YongHuDengLu.qrc"/>
+ </resources>
+ <connections/>
+</ui>

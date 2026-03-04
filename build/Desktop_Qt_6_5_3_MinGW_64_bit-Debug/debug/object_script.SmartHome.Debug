@@ -1,0 +1,17 @@
+debug/aichat.o
+debug/loginwindow.o
+debug/main.o
+debug/mainwindow.o
+debug/qrc_AI.o
+debug/qrc_HuanJin.o
+debug/qrc_YongHuDengLu.o
+debug/qrc_ai_new.o
+debug/qrc_send.o
+debug/qrc_upload.o
+debug/qrc_video.o
+debug/qrc_xiaoqu.o
+debug/qrc_xiaoquBai.o
+debug/qrc_yh.o
+debug/moc_aichat.o
+debug/moc_loginwindow.o
+debug/moc_mainwindow.o

@@ -1,0 +1,17 @@
+release/aichat.o
+release/loginwindow.o
+release/main.o
+release/mainwindow.o
+release/qrc_AI.o
+release/qrc_HuanJin.o
+release/qrc_YongHuDengLu.o
+release/qrc_ai_new.o
+release/qrc_send.o
+release/qrc_upload.o
+release/qrc_video.o
+release/qrc_xiaoqu.o
+release/qrc_xiaoquBai.o
+release/qrc_yh.o
+release/moc_aichat.o
+release/moc_loginwindow.o
+release/moc_mainwindow.o
