@@ -1,8 +1,8 @@
 #include "aichat.h"
 #include <QNetworkProxyFactory>
 
-#define GLM_API_KEY "Bearer 7e8450d1df22463f842c125145ff209e.wrfHD0GyxA6qpHPV"
-#define GLM_STREAM_URL "https://open.bigmodel.cn/api/paas/v4/chat/completions"
+#define GLM_API_KEY ""
+#define GLM_STREAM_URL ""
 
 AiChat::AiChat(QObject *parent)
     : QObject{parent}
@@ -131,3 +131,4 @@ void AiChat::handleError(QNetworkReply::NetworkError error)
         emit SendToUserAnsower("网络错误: " + m_currentReply->errorString());
     }
 }
+
