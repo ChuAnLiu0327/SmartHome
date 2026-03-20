@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icons/wendu.png</file>
+        <file>icons/guangzhao.png</file>
+        <file>icons/shebei.png</file>
+        <file>icons/shidu.png</file>
+        <file>icons/pm25.png</file>
+        <file>icons/ranqi.png</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

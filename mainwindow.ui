@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1089</width>
+    <height>919</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>智慧小区物业中控系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons/xiaoqu.qrc">
+    <normaloff>:/new/prefix1/xiaoqu.png</normaloff>:/new/prefix1/xiaoqu.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_main">
+      <property name="styleSheet">
+       <string notr="true">/* 标签栏容器样式 */
+    QTabWidget::pane {
+        border: 1px solid #e0e0e0;
+        background-color: #FFFFFFFF;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+    
+    /* 标签页本身（非选中状态） */
+    QTabBar::tab {
+        background-color: #f5f5f5;
+        border: 1px solid #e0e0e0;
+        border-bottom: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        padding: 10px 20px;
+        margin-right: 2px;
+        font-size: 16px;
+        color: #666;
+    }
+    
+    /* 鼠标悬停效果 */
+    QTabBar::tab:hover {
+        background-color: #e8f4ff;
+        color: #0078d4;
+    }
+    
+    /* 选中状态的标签页 */
+    QTabBar::tab:selected {
+        background-color: white;
+        color: #0078d4;
+        font-weight: bold;
+        border-bottom: 2px solid #0078d4;
+    }
+    
+    /* 非选中状态的标签页 - 底部边框 */
+    QTabBar::tab:!selected {
+        margin-top: 2px;
+    }
+    
+    /* 禁用状态的标签页 */
+    QTabBar::tab:disabled {
+        color: #999;
+        background-color: #f0f0f0;
+    }</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="tab_env">
+       <attribute name="icon">
+        <iconset resource="icons/HuanJin.qrc">
+         <normaloff>:/new/prefix1/HuanJin.png</normaloff>:/new/prefix1/HuanJin.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>环境监测</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QWidget" name="widget_wendu" native="true"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QWidget" name="widget_shidu" native="true"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QWidget" name="widget_PM25" native="true"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QWidget" name="widget_guangzhao" native="true"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QWidget" name="widget_ranqi" native="true"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QWidget" name="widget_shebeizhuangtai" native="true"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_charts" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_money">
+       <attribute name="icon">
+        <iconset resource="icons/HuanJin.qrc">
+         <normaloff>:/new/prefix3/FeiYong.png</normaloff>:/new/prefix3/FeiYong.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>物业费用缴纳</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_chat">
+       <attribute name="icon">
+        <iconset resource="icons/HuanJin.qrc">
+         <normaloff>:/new/prefix4/LiaoTian.png</normaloff>:/new/prefix4/LiaoTian.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>小区聊天室</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">/* 标签栏容器样式 */
+    QTabWidget::pane {
+        border: 1px solid #e0e0e0;
+        background-color: #FFFFFFFF;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+    
+    /* 标签页本身（非选中状态） */
+    QTabBar::tab {
+        background-color: #f5f5f5;
+        border: 1px solid #e0e0e0;
+        border-bottom: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        padding: 10px 20px;
+        margin-right: 2px;
+        font-size: 16px;
+        color: #666;
+    }
+    
+    /* 鼠标悬停效果 */
+    QTabBar::tab:hover {
+        background-color: #e8f4ff;
+        color: #0078d4;
+    }
+    
+    /* 选中状态的标签页 */
+    QTabBar::tab:selected {
+        background-color: white;
+        color: #0078d4;
+        font-weight: bold;
+        border-bottom: 2px solid #0078d4;
+    }
+    
+    /* 非选中状态的标签页 - 底部边框 */
+    QTabBar::tab:!selected {
+        margin-top: 2px;
+    }
+    
+    /* 禁用状态的标签页 */
+    QTabBar::tab:disabled {
+        color: #999;
+        background-color: #f0f0f0;
+    }</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <widget class="QWidget" name="tab_chat_all">
+           <attribute name="icon">
+            <iconset resource="icons/chat_all.qrc">
+             <normaloff>:/new/prefix1/all.png</normaloff>:/new/prefix1/all.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>小区业主公共群</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QListWidget" name="listWidget_all_chat"/>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_5" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_send_all">
+                 <property name="styleSheet">
+                  <string notr="true">/* QTextEdit 基础样式 */
+QLineEdit {
+    /* 背景色：浅灰色，柔和不刺眼 */
+    background-color: #f8f9fa;
+    /* 边框：浅灰色，圆角8px（可调整） */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    /* 内边距：避免文字贴边框，上下左右各10px */
+    padding: 10px;
+    /* 文字样式：默认字体，14px大小，深灰色文字 */
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 20px;
+    /* 禁用默认的焦点虚线框 */
+    outline: none;
+}
+
+/* 鼠标悬浮状态 */
+QLineEdit:hover {
+    border-color: #adb5bd;
+    background-color: #f1f3f5;
+}
+
+/* 获得焦点状态（激活） */
+QLineEdit:focus {
+    border-color: #4dabf7;
+    /* 轻微外发光效果，增强焦点提示 */
+}
+
+/* 选中文本的背景色 */
+QLineEdit::selection {
+    background-color: #4dabf7;
+    color: white;
+}
+
+/* 禁用状态 */
+QLineEdit:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    border-color: #e9ecef;
+}
+
+/* ---------- 配套滚动条美化 ---------- */
+/* 滚动条整体 */
+QLineEdit QScrollBar:vertical {
+    width: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+/* 滚动条滑块 */
+QLineEdit QScrollBar::handle:vertical {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+/* 滑块悬浮 */
+QLineEdit QScrollBar::handle:vertical:hover {
+    background-color: #adb5bd;
+}
+
+/* 滚动条上下箭头（隐藏） */
+QLineEdit QScrollBar::sub-line:vertical,
+QLineEdit QScrollBar::add-line:vertical {
+    height: 0px;
+}
+
+/* 水平滚动条（按需启用） */
+QLineEdit QScrollBar:horizontal {
+    height: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+QLineEdit QScrollBar::handle:horizontal {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QLineEdit QScrollBar::handle:horizontal:hover {
+    background-color: #adb5bd;
+}
+
+QLineEdit QScrollBar::sub-line:horizontal,
+QLineEdit QScrollBar::add-line:horizontal {
+    width: 0px;
+}</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_send_chat_all">
+                 <property name="styleSheet">
+                  <string notr="true">/* 发送按钮基础样式 */
+QPushButton { /* 使用ID选择器，避免影响其他按钮 */
+    /* 背景颜色（示例中的蓝色，可根据需要调整） */
+    background-color: #2196F3; /* Material Design 标准蓝色 */
+    /* 文字样式 */
+    color: white; /* 白色文字 */
+    font-size: 20px; /* 字体大小 */
+    font-weight: 500; /* 字体粗细（可选，增强层次感） */
+    /* 边框与圆角 */
+    border: none; /* 无边框 */
+    border-radius: 6px; /* 圆角（示例中的圆角约6px） */
+    /* 内边距（按钮内容与边框的间距，避免拥挤） */
+    padding: 10px 20px; /* 上下10px，左右20px */
+    /* 图标设置 */
+    icon-size: 16px; /* 图标大小（与文字匹配） */
+    /* 最小宽高（确保按钮不会太小） */
+    min-width: 120px; /* 最小宽度 */
+    min-height: 36px; /* 最小高度 */
+}
+
+/*  hover 效果（鼠标悬停时） */
+QPushButton:hover {
+    background-color: #1976D2; /* 更深的蓝色（增强交互反馈） */
+}
+
+/*  pressed 效果（鼠标按下时） */
+QPushButton:pressed {
+    background-color: #1565C0; /* 更暗的蓝色（模拟按压感） */
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>发送</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="icons/send.qrc">
+                   <normaloff>:/new/prefix1/send_baise.png</normaloff>:/new/prefix1/send_baise.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>32</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_chat_one">
+           <attribute name="icon">
+            <iconset resource="icons/tab_chat.qrc">
+             <normaloff>:/new/prefix2/one.png</normaloff>:/new/prefix2/one.png</iconset>
+           </attribute>
+           <attribute name="title">
+            <string>私聊</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLineEdit" name="lineEdit_recv_account">
+              <property name="styleSheet">
+               <string notr="true">/* QTextEdit 基础样式 */
+QLineEdit {
+    /* 背景色：浅灰色，柔和不刺眼 */
+    background-color: #f8f9fa;
+    /* 边框：浅灰色，圆角8px（可调整） */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    /* 内边距：避免文字贴边框，上下左右各10px */
+    padding: 10px;
+    /* 文字样式：默认字体，14px大小，深灰色文字 */
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 20px;
+    /* 禁用默认的焦点虚线框 */
+    outline: none;
+}
+
+/* 鼠标悬浮状态 */
+QLineEdit:hover {
+    border-color: #adb5bd;
+    background-color: #f1f3f5;
+}
+
+/* 获得焦点状态（激活） */
+QLineEdit:focus {
+    border-color: #4dabf7;
+    /* 轻微外发光效果，增强焦点提示 */
+}
+
+/* 选中文本的背景色 */
+QLineEdit::selection {
+    background-color: #4dabf7;
+    color: white;
+}
+
+/* 禁用状态 */
+QLineEdit:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    border-color: #e9ecef;
+}
+
+/* ---------- 配套滚动条美化 ---------- */
+/* 滚动条整体 */
+QLineEdit QScrollBar:vertical {
+    width: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+/* 滚动条滑块 */
+QLineEdit QScrollBar::handle:vertical {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+/* 滑块悬浮 */
+QLineEdit QScrollBar::handle:vertical:hover {
+    background-color: #adb5bd;
+}
+
+/* 滚动条上下箭头（隐藏） */
+QLineEdit QScrollBar::sub-line:vertical,
+QLineEdit QScrollBar::add-line:vertical {
+    height: 0px;
+}
+
+/* 水平滚动条（按需启用） */
+QLineEdit QScrollBar:horizontal {
+    height: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+QLineEdit QScrollBar::handle:horizontal {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QLineEdit QScrollBar::handle:horizontal:hover {
+    background-color: #adb5bd;
+}
+
+QLineEdit QScrollBar::sub-line:horizontal,
+QLineEdit QScrollBar::add-line:horizontal {
+    width: 0px;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="listWidget_one_chat"/>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget_6" native="true">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLineEdit" name="lineEdit_send_one">
+                 <property name="styleSheet">
+                  <string notr="true">/* QTextEdit 基础样式 */
+QLineEdit {
+    /* 背景色：浅灰色，柔和不刺眼 */
+    background-color: #f8f9fa;
+    /* 边框：浅灰色，圆角8px（可调整） */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    /* 内边距：避免文字贴边框，上下左右各10px */
+    padding: 10px;
+    /* 文字样式：默认字体，14px大小，深灰色文字 */
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 20px;
+    /* 禁用默认的焦点虚线框 */
+    outline: none;
+}
+
+/* 鼠标悬浮状态 */
+QLineEdit:hover {
+    border-color: #adb5bd;
+    background-color: #f1f3f5;
+}
+
+/* 获得焦点状态（激活） */
+QLineEdit:focus {
+    border-color: #4dabf7;
+    /* 轻微外发光效果，增强焦点提示 */
+}
+
+/* 选中文本的背景色 */
+QLineEdit::selection {
+    background-color: #4dabf7;
+    color: white;
+}
+
+/* 禁用状态 */
+QLineEdit:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    border-color: #e9ecef;
+}
+
+/* ---------- 配套滚动条美化 ---------- */
+/* 滚动条整体 */
+QLineEdit QScrollBar:vertical {
+    width: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+/* 滚动条滑块 */
+QLineEdit QScrollBar::handle:vertical {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+/* 滑块悬浮 */
+QLineEdit QScrollBar::handle:vertical:hover {
+    background-color: #adb5bd;
+}
+
+/* 滚动条上下箭头（隐藏） */
+QLineEdit QScrollBar::sub-line:vertical,
+QLineEdit QScrollBar::add-line:vertical {
+    height: 0px;
+}
+
+/* 水平滚动条（按需启用） */
+QLineEdit QScrollBar:horizontal {
+    height: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+QLineEdit QScrollBar::handle:horizontal {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QLineEdit QScrollBar::handle:horizontal:hover {
+    background-color: #adb5bd;
+}
+
+QLineEdit QScrollBar::sub-line:horizontal,
+QLineEdit QScrollBar::add-line:horizontal {
+    width: 0px;
+}</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_send_one">
+                 <property name="styleSheet">
+                  <string notr="true">/* 发送按钮基础样式 */
+QPushButton { /* 使用ID选择器，避免影响其他按钮 */
+    /* 背景颜色（示例中的蓝色，可根据需要调整） */
+    background-color: #2196F3; /* Material Design 标准蓝色 */
+    /* 文字样式 */
+    color: white; /* 白色文字 */
+    font-size: 20px; /* 字体大小 */
+    font-weight: 500; /* 字体粗细（可选，增强层次感） */
+    /* 边框与圆角 */
+    border: none; /* 无边框 */
+    border-radius: 6px; /* 圆角（示例中的圆角约6px） */
+    /* 内边距（按钮内容与边框的间距，避免拥挤） */
+    padding: 10px 20px; /* 上下10px，左右20px */
+    /* 图标设置 */
+    icon-size: 16px; /* 图标大小（与文字匹配） */
+    /* 最小宽高（确保按钮不会太小） */
+    min-width: 120px; /* 最小宽度 */
+    min-height: 36px; /* 最小高度 */
+}
+
+/*  hover 效果（鼠标悬停时） */
+QPushButton:hover {
+    background-color: #1976D2; /* 更深的蓝色（增强交互反馈） */
+}
+
+/*  pressed 效果（鼠标按下时） */
+QPushButton:pressed {
+    background-color: #1565C0; /* 更暗的蓝色（模拟按压感） */
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>发送</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="icons/send.qrc">
+                   <normaloff>:/new/prefix1/send_baise.png</normaloff>:/new/prefix1/send_baise.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>36</width>
+                   <height>36</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_aichat">
+       <attribute name="icon">
+        <iconset resource="icons/AI.qrc">
+         <normaloff>:/new/prefix1/AI.png</normaloff>:/new/prefix1/AI.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>AI分析师</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="styleSheet">
+           <string notr="true">QWidget
+{
+	background-color: #E5E7EB;
+}</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>288</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QPushButton" name="uploadConfigBtn">
+                <property name="styleSheet">
+                 <string notr="true">/* 基础样式 */
+QPushButton#uploadConfigBtn {
+    /* 背景色：匹配图中的蓝紫色 */
+    background-color: #4E5AF1;
+    /* 文字颜色：白色 */
+    color: white;
+    /* 去掉默认边框 */
+    border: none;
+    /* 圆角大小：8px 匹配视觉效果 */
+    border-radius: 8px;
+    /* 内边距：上下10px，左右16px，左侧额外留出图标位置 */
+    padding: 10px 16px;
+    padding-left: 32px;
+    /* 字体样式 */
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 18px;
+    /* 图标位置：左侧10px居中（如果你用背景图做图标） */
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+}
+
+/* 鼠标悬浮状态 */
+QPushButton#uploadConfigBtn:hover {
+    background-color: #434EDC;
+}
+
+/* 鼠标按下状态 */
+QPushButton#uploadConfigBtn:pressed {
+    background-color: #3A44C8;
+}
+
+/* 禁用状态 */
+QPushButton#uploadConfigBtn:disabled {
+    background-color: #B4B8F5;
+    color: #E0E0E0;
+}</string>
+                </property>
+                <property name="text">
+                 <string>上传配置文件</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="icons/upload.qrc">
+                  <normaloff>:/new/prefix1/upload.png</normaloff>:/new/prefix1/upload.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;支持JSON或YMAL格式的配置文件&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>288</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listWidget_chat">
+          <property name="styleSheet">
+           <string notr="true">QListWidget { border: none; background: white; }</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_send_message">
+             <property name="styleSheet">
+              <string notr="true">/* QTextEdit 基础样式 */
+QLineEdit {
+    /* 背景色：浅灰色，柔和不刺眼 */
+    background-color: #f8f9fa;
+    /* 边框：浅灰色，圆角8px（可调整） */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    /* 内边距：避免文字贴边框，上下左右各10px */
+    padding: 10px;
+    /* 文字样式：默认字体，14px大小，深灰色文字 */
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 20px;
+    /* 禁用默认的焦点虚线框 */
+    outline: none;
+}
+
+/* 鼠标悬浮状态 */
+QLineEdit:hover {
+    border-color: #adb5bd;
+    background-color: #f1f3f5;
+}
+
+/* 获得焦点状态（激活） */
+QLineEdit:focus {
+    border-color: #4dabf7;
+    /* 轻微外发光效果，增强焦点提示 */
+}
+
+/* 选中文本的背景色 */
+QLineEdit::selection {
+    background-color: #4dabf7;
+    color: white;
+}
+
+/* 禁用状态 */
+QLineEdit:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    border-color: #e9ecef;
+}
+
+/* ---------- 配套滚动条美化 ---------- */
+/* 滚动条整体 */
+QLineEdit QScrollBar:vertical {
+    width: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+/* 滚动条滑块 */
+QLineEdit QScrollBar::handle:vertical {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+/* 滑块悬浮 */
+QLineEdit QScrollBar::handle:vertical:hover {
+    background-color: #adb5bd;
+}
+
+/* 滚动条上下箭头（隐藏） */
+QLineEdit QScrollBar::sub-line:vertical,
+QLineEdit QScrollBar::add-line:vertical {
+    height: 0px;
+}
+
+/* 水平滚动条（按需启用） */
+QLineEdit QScrollBar:horizontal {
+    height: 8px;
+    background-color: transparent;
+    margin: 0px;
+}
+
+QLineEdit QScrollBar::handle:horizontal {
+    background-color: #ced4da;
+    border-radius: 4px;
+    min-width: 20px;
+}
+
+QLineEdit QScrollBar::handle:horizontal:hover {
+    background-color: #adb5bd;
+}
+
+QLineEdit QScrollBar::sub-line:horizontal,
+QLineEdit QScrollBar::add-line:horizontal {
+    width: 0px;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_ai_send">
+             <property name="styleSheet">
+              <string notr="true">/* 发送按钮基础样式 */
+QPushButton { /* 使用ID选择器，避免影响其他按钮 */
+    /* 背景颜色（示例中的蓝色，可根据需要调整） */
+    background-color: #2196F3; /* Material Design 标准蓝色 */
+    /* 文字样式 */
+    color: white; /* 白色文字 */
+    font-size: 20px; /* 字体大小 */
+    font-weight: 500; /* 字体粗细（可选，增强层次感） */
+    /* 边框与圆角 */
+    border: none; /* 无边框 */
+    border-radius: 6px; /* 圆角（示例中的圆角约6px） */
+    /* 内边距（按钮内容与边框的间距，避免拥挤） */
+    padding: 10px 20px; /* 上下10px，左右20px */
+    /* 图标设置 */
+    icon-size: 16px; /* 图标大小（与文字匹配） */
+    /* 最小宽高（确保按钮不会太小） */
+    min-width: 120px; /* 最小宽度 */
+    min-height: 36px; /* 最小高度 */
+}
+
+/*  hover 效果（鼠标悬停时） */
+QPushButton:hover {
+    background-color: #1976D2; /* 更深的蓝色（增强交互反馈） */
+}
+
+/*  pressed 效果（鼠标按下时） */
+QPushButton:pressed {
+    background-color: #1565C0; /* 更暗的蓝色（模拟按压感） */
+}</string>
+             </property>
+             <property name="text">
+              <string>发送</string>
+             </property>
+             <property name="icon">
+              <iconset resource="icons/send.qrc">
+               <normaloff>:/new/prefix1/send_baise.png</normaloff>:/new/prefix1/send_baise.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_videochat">
+       <attribute name="icon">
+        <iconset resource="icons/video.qrc">
+         <normaloff>:/new/prefix1/video.png</normaloff>:/new/prefix1/video.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>视频通话</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1089</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="icons/tab_chat.qrc"/>
+  <include location="icons/video.qrc"/>
+  <include location="icons/send.qrc"/>
+  <include location="icons/HuanJin.qrc"/>
+  <include location="icons/AI.qrc"/>
+  <include location="icons/upload.qrc"/>
+  <include location="icons/xiaoqu.qrc"/>
+  <include location="icons/chat_all.qrc"/>
+ </resources>
+ <connections/>
+</ui>
