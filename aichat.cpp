@@ -1,7 +1,7 @@
 #include "aichat.h"
 #include <QNetworkProxyFactory>
 
-#define GLM_API_KEY "Bearer 7e8450d1df22463f842c125145ff209e.wrfHD0GyxA6qpHPV"
+#define GLM_API_KEY ""
 #define GLM_STREAM_URL "https://open.bigmodel.cn/api/paas/v4/chat/completions"
 
 AiChat::AiChat(QObject *parent)
